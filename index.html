@@ -26,6 +26,19 @@
   src="https://www.facebook.com/tr?id=439657836713180&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
+
+
+<script>
+window.onload = () => {
+    let pageLinks = document.querySelectorAll('a');
+		    pageLinks.forEach(elem => {
+        let href = elem.href;
+				if (href === undefined || href.indexOf("#") >= 0 || href.indexOf("api.whatsapp") >= 0) return true;
+				let search_params = document.location.search.replace('?', '');
+				elem.href = href + (href.indexOf("?") > 0 ? '&' : '?') + search_params.toString();
+		    });
+	    }
+</script>
 	
 	
 <!-- Face In -->
@@ -71,18 +84,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-<script>
-window.onload = () => {
-    let pageLinks = document.querySelectorAll('a');
-		    pageLinks.forEach(elem => {
-        let href = elem.href;
-				if (href === undefined || href.indexOf("#") >= 0 || href.indexOf("api.whatsapp") >= 0) return true;
-				let search_params = document.location.search.replace('?', '');
-				elem.href = href + (href.indexOf("?") > 0 ? '&' : '?') + search_params.toString();
-		    });
-	    }
-</script>
 	
 </head>
 
@@ -489,7 +490,7 @@ window.onload = () => {
     <div class="container">
       <div class="row">
         <div class="col-xs12">
-          <h1>Reportagem EXCLUSIVA da TV Record Mostra Como Pessoas Comuns Estão Acertando Nas Loterias Toda Semana!</h1>
+			<h1>Reportagem <font color="#ffff00">EXCLUSIVA</font> da TV Record Mostra Como <font color="#ffff00">Pessoas Comuns</font> Estão <font color="#ffff00">Acertando Nas Loterias</font> Toda Semana!</h1>
         </div>
       </div>
     </div>
@@ -501,6 +502,7 @@ window.onload = () => {
     <div class="row">
       <div class="col-xs-12 text-center">
        <p></p>
+       <br>
 		<div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/f_3yQZtf2SE?wmode=opaque&showinfo=0&autoplay=0&controls=0&modestbranding=1&rel=0" frameborder="0" allowfullscreen="allowfullscreen" style="border: 5px solid green;"></iframe>
         </div>
